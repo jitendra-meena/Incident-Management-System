@@ -48,14 +48,15 @@ source env/bin/activate
 ```
 
 3. Create and activate a virtual environment::
-
-python -m venv env
-source env/bin/activate
-
+```shell
+       python -m venv env
+       source env/bin/activate
+```
 4. Install the required packages:
 
-pip install -r requirements.txt
-
+```shell
+      pip install -r requirements.txt
+```
 5. Configure the database settings:
 
 Open the settings.py file in the incidentmanagement directory.
@@ -63,15 +64,17 @@ Update the DATABASES configuration with your MySQL database settings.
 
 6. Apply database migrations:
 
-python manage.py migrate
-
+```shell
+      python manage.py migrate
+```
 7. Start the development server:
 
-python manage.py runserver
-
+```shell
+    python manage.py runserver
+```
 8. The API endpoints will be available at http://localhost:8000/api/.
 
-Usage
+## Usage
 Register a new user by making a POST request to http://localhost:8000/api/register/. Provide the username and password in the request body.
 
 Log in with a user by making a POST request to http://localhost:8000/api/login/. Provide the username and password in the request body. The response will include an authentication token.
